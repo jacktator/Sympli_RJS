@@ -1,7 +1,7 @@
 # Star Wars App
 
 [![Netlify Status](https://api.netlify.com/api/v1/badges/fa7d6d8d-09d3-44dc-8bd6-b1e1a0edf217/deploy-status)](https://sympli-rjs.netlify.app/storybook)
-[![Storybook](https://cdn.jsdelivr.net/gh/storybookjs/brand@master/badge/badge-storybook.svg)](link to site)
+[![Storybook](https://cdn.jsdelivr.net/gh/storybookjs/brand@master/badge/badge-storybook.svg)](https://sympli-rjs.netlify.app/storybook)
 <p>
     <a href="https://twitter.com/intent/follow?screen_name=jacktator">
         <img src="https://badgen.net/twitter/follow/jacktator?icon=twitter&label=%40jacktator" alt="Official Twitter Handle" />
