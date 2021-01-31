@@ -10,7 +10,7 @@
 
 React Application which requests Start Wars Characters, an technical interview for Sympli.
 
-[Live Site](https://sympli-rjs.netlify.app) | [Docs](https://sympli-rjs.netlify.app/docs) | [UI Library](https://sympli-rjs.netlify.app/storybook) | [Stacks](./DOCS.md)
+[Live Site](https://sympli-rjs.netlify.app) | [UI Library](https://sympli-rjs.netlify.app/storybook) | [UI Docs](https://sympli-rjs.netlify.app/docs) | [Bundle Explorer](https://sympli-rjs.netlify.app/explorer) | [Tech Stacks](./DOCS.md)
 
 This project was created with [Create React App](https://github.com/facebook/create-react-app), with PWA.
 
