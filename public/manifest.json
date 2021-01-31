@@ -1,5 +1,5 @@
 {
-  "name": "StarWars",
+  "name": "StarWars App",
   "short_name": "StarWars",
   "icons": [
     {
@@ -13,7 +13,7 @@
       "sizes": "192x192"
     },
     {
-      "src": "icons/android-chrome-512x512",
+      "src": "icons/android-chrome-512x512.png",
       "type": "image/png",
       "sizes": "512x512"
     }
