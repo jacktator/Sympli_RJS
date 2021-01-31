@@ -30,9 +30,14 @@
   },
   "scripts": {
     "start": "react-scripts start",
-    "build": "REACT_APP_COMMIT=$COMMIT_REF react-scripts build",
+    "build": "yarn run build:app && yarn run build:storybook && yarn run build:docs",
+    "build:app": "REACT_APP_COMMIT=$COMMIT_REF react-scripts build",
+    "build:storybook": "build-storybook -o ./build/storybook",
+    "build:docs": "build-storybook --docs -o ./build/docs",
     "test": "react-scripts test",
-    "eject": "react-scripts eject"
+    "eject": "react-scripts eject",
+    "storybook": "start-storybook -p 6006 -s public",
+    "build-storybook": "build-storybook -s public"
   },
   "eslintConfig": {
     "extends": [
@@ -51,5 +56,14 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
+  },
+  "devDependencies": {
+    "@storybook/addon-a11y": "^6.1.15",
+    "@storybook/addon-actions": "^6.1.15",
+    "@storybook/addon-essentials": "^6.1.15",
+    "@storybook/addon-links": "^6.1.15",
+    "@storybook/node-logger": "^6.1.15",
+    "@storybook/preset-create-react-app": "^3.1.5",
+    "@storybook/react": "^6.1.15"
   }
 }

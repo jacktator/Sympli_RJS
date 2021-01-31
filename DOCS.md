@@ -26,11 +26,13 @@ Must Have:
 - [x] [React Hooks](https://reactjs.org/docs/hooks-intro.html)
 - [ ] [React Router](https://reactrouter.com/web/guides/quick-start)
 - [ ] [Code Spliting with Routes](https://reactjs.org/docs/code-splitting.html#route-based-code-splitting)
+- [ ] [ESLint]()
+- [ ] [ESLint Prettier]()
 - [ ] [Error Boundary](https://reactjs.org/docs/error-boundaries.html)
-- [ ] [Netlify CICD](https://www.netlify.com/)
+- [x] [Netlify CICD](https://www.netlify.com/)
 - [ ] [Unit Tests](https://create-react-app.dev/docs/running-tests/)
 - [ ] [Styled Component](https://www.styled-components.com/)
-- [ ] [StoryBook](https://storybook.js.org/)
+- [x] [StoryBook](https://storybook.js.org/)
 - [ ] Snapshot (Testing)
-- [ ] PWA
-- [ ] Offline First
+- [x] [PWA](https://create-react-app.dev/docs/making-a-progressive-web-app/)
+- [x] [Background Sync](https://developers.google.com/web/tools/workbox/modules/workbox-background-sync)
