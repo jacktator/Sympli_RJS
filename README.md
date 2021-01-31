@@ -1,6 +1,6 @@
 # Star Wars App
 
-[![Netlify Status]()]()
+[![Netlify Status](https://api.netlify.com/api/v1/badges/fa7d6d8d-09d3-44dc-8bd6-b1e1a0edf217/deploy-status)](https://app.netlify.com/sites/sympli-rjs/deploys)
 <p>
     <a href="https://twitter.com/intent/follow?screen_name=jacktator">
         <img src="https://badgen.net/twitter/follow/jacktator?icon=twitter&label=%40jacktator" alt="Official Twitter Handle" />
@@ -9,7 +9,7 @@
 
 React Application which requests Start Wars Characters, an technical interview for Sympli.
 
-[Live Site]() | [Docs](./DOCS.md) | [UI Library]()
+[Live Site](https://sympli-rjs.netlify.app) | [Docs](./DOCS.md) | [UI Library]()
 
 This project was created with [Create React App](https://github.com/facebook/create-react-app).
 

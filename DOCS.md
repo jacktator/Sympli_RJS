@@ -3,7 +3,7 @@
 ## Planning
 
 This project should have the following
-- [Live Site]()
+- [Live Site](https://sympli-rjs.netlify.app)
 - [UI Library]()
 - [License](./LICENSE)
 
@@ -27,7 +27,7 @@ Must Have:
 - [ ] [React Router](https://reactrouter.com/web/guides/quick-start)
 - [ ] [Code Spliting with Routes](https://reactjs.org/docs/code-splitting.html#route-based-code-splitting)
 - [ ] [Error Boundary](https://reactjs.org/docs/error-boundaries.html)
-- [ ] [Netlify](https://www.netlify.com/)
+- [ ] [Netlify CICD](https://www.netlify.com/)
 - [ ] [Unit Tests](https://create-react-app.dev/docs/running-tests/)
 - [ ] [Styled Component](https://www.styled-components.com/)
 - [ ] [StoryBook](https://storybook.js.org/)
