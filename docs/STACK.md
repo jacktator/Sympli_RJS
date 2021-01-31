@@ -5,7 +5,7 @@
 This project should have the following
 - [Live Site](https://sympli-rjs.netlify.app)
 - [UI Library]()
-- [License](./LICENSE)
+- [License](../LICENSE)
 
 ## Features by Priority
 
@@ -36,3 +36,4 @@ Must Have:
 - [ ] Snapshot (Testing)
 - [x] [PWA](https://create-react-app.dev/docs/making-a-progressive-web-app/)
 - [x] [Background Sync](https://developers.google.com/web/tools/workbox/modules/workbox-background-sync)
+- [x] [Source Map Explorer](https://www.npmjs.com/package/source-map-explorer)
