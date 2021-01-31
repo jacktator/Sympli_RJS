@@ -12,17 +12,22 @@ React Application which requests Start Wars Characters, an technical interview f
 
 [Live Site](https://sympli-rjs.netlify.app) | [UI Library](https://sympli-rjs.netlify.app/storybook/index.html) | [UI Docs](https://sympli-rjs.netlify.app/docs/index.html) | [Bundle Explorer](https://sympli-rjs.netlify.app/explorer.html) | [Tech Stacks](docs/STACK.md)
 
-This project was created with [Create React App](./docs/CRA.md).
+This project was created with [Yarn Workspace](https://classic.yarnpkg.com/en/docs/workspaces/).
 
-It is also an installable, Offline-First PWA, allowing users to use it even when offline.
+# Mono Repo
 
-## Application Architecture
+This app is structured as mono repo.
 
-![](./architecture.png).
+## The App
 
-## Screenshots
+The App specific code is placed in the `./app` folder. 
 
-![](./docs/assets/safari.jpg)
-![](./docs/assets/touchbar.jpg)
-![](./docs/assets/iphone.png)
-![](./docs/assets/android.png)
+For more info, please see [`./app/README.md`](./app/README.md)
+
+## The Storybook
+
+The Storybook is created to host components and docs.
+
+## The Packages
+
+Presentational Components are created and placed into separate packages.

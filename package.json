@@ -1,11 +1,11 @@
 {
   "name": "sympli-rjs",
   "private": true,
-  "workspaces": ["app", "storybook"],
+  "workspaces": ["app", "storybook", "packages/*"],
   "scripts": {
     "start": "yarn workspace @sympli/starwars start",
     "storybook": "yarn workspace @sympli/storybook start",
     "build": "yarn workspaces run build",
-    "test": "yarn workspace @sympli/starwars start test"
+    "test": "yarn workspaces run test"
   }
 }
