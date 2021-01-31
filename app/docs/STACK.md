@@ -32,6 +32,7 @@ Must Have:
 - [x] [Error Boundary](https://reactjs.org/docs/error-boundaries.html)
 - [x] [Sentry](https://sentry.io/)
 - [x] [Netlify CICD](https://www.netlify.com/)
+- [ ] [SNYK]()
 - [ ] [Unit Tests](https://create-react-app.dev/docs/running-tests/)
 - [ ] [Styled Component](https://www.styled-components.com/)
 - [x] [StoryBook](https://storybook.js.org/)

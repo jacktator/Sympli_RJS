@@ -1,0 +1,28 @@
+{
+  "name": "@sympli/storybook",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "start": "start-storybook -p 6006",
+    "build": "yarn run build:storybook && yarn run build:docs",
+    "build:storybook": "build-storybook -o ../app/build/storybook",
+    "build:docs": "build-storybook --docs -o ../app/build/docs"
+  },
+  "dependencies": {
+    "react": "^17.0.1",
+    "react-dom": "^17.0.1",
+    "react-scripts": "4.0.1",
+    "typescript": "^4.0.3",
+    "@storybook/addon-a11y": "^6.1.15",
+    "@storybook/addon-actions": "^6.1.15",
+    "@storybook/addon-essentials": "^6.1.15",
+    "@storybook/addon-links": "^6.1.15",
+    "@storybook/node-logger": "^6.1.15",
+    "@storybook/preset-create-react-app": "^3.1.5",
+    "@storybook/react": "^6.1.15"
+  },
+  "devDependencies": {
+    "@types/react": "^16.9.53",
+    "@types/react-dom": "^16.9.8"
+  }
+}
