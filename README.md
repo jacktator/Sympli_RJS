@@ -11,7 +11,9 @@ React Application which requests Start Wars Characters, an technical interview f
 
 [Live Site](https://sympli-rjs.netlify.app) | [Docs](./DOCS.md) | [UI Library]()
 
-This project was created with [Create React App](https://github.com/facebook/create-react-app).
+This project was created with [Create React App](https://github.com/facebook/create-react-app), with PWA.
+
+![](./architecture.png).
 
 ## Available Scripts
 

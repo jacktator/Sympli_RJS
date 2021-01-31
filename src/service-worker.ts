@@ -12,7 +12,8 @@ import { clientsClaim } from 'workbox-core';
 import { ExpirationPlugin } from 'workbox-expiration';
 import { precacheAndRoute, createHandlerBoundToURL } from 'workbox-precaching';
 import { registerRoute } from 'workbox-routing';
-import { StaleWhileRevalidate } from 'workbox-strategies';
+import {NetworkFirst, StaleWhileRevalidate} from 'workbox-strategies';
+import {BackgroundSyncPlugin} from "workbox-background-sync";
 
 declare const self: ServiceWorkerGlobalScope;
 
@@ -54,10 +55,10 @@ registerRoute(
 );
 
 // An example runtime caching route for requests that aren't handled by the
-// precache, in this case same-origin .png requests like those from in public/
+// precache, in this case same-origin .png .ico .svg requests like those from in public/
 registerRoute(
   // Add in any other file extensions or routing criteria as needed.
-  ({ url }) => url.origin === self.location.origin && url.pathname.endsWith('.png'),
+  ({ url }) => url.origin === self.location.origin && (url.pathname.endsWith('.png') || url.pathname.endsWith('.ico') || url.pathname.endsWith('.svg')),
   // Customize this strategy as needed, e.g., by changing to CacheFirst.
   new StaleWhileRevalidate({
     cacheName: 'images',
@@ -67,6 +68,24 @@ registerRoute(
       new ExpirationPlugin({ maxEntries: 50 }),
     ],
   })
+);
+
+const STARWARS_API_ORIGIN = 'https://swapi.dev';
+const STARWARS_API_CACHE_QUEUE_NAME = 'starwars-api';
+// Enabling BackgroundSync for Network Response
+// @see: https://developers.google.com/web/tools/workbox/modules/workbox-background-sync
+const bgSyncPlugin = new BackgroundSyncPlugin(STARWARS_API_CACHE_QUEUE_NAME, {
+  maxRetentionTime: 24 * 60, // Retry for max of 24 Hours (specified in minutes)
+});
+
+// Caching Network Response from Starwars API
+// @see: https://developers.google.com/web/tools/workbox/modules/workbox-strategies
+registerRoute(
+  ({ url }) => url.origin.startsWith(STARWARS_API_ORIGIN),
+  new NetworkFirst({
+    cacheName: STARWARS_API_CACHE_QUEUE_NAME,
+    plugins: [bgSyncPlugin],
+  }),
 );
 
 // This allows the web app to trigger skipWaiting via
