@@ -18,7 +18,6 @@ export const PeopleProvider: React.FC<PeopleProviderProps> = ({
     const res = await api.getPeople();
 
     const {count, next, previous, results} = res.data;
-    console.log("res", res)
 
     const people = results ? mapAPIPersonToPerson(results) : [];
 
