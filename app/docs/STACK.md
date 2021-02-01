@@ -32,7 +32,7 @@ Must Have:
 - [x] [Error Boundary](https://reactjs.org/docs/error-boundaries.html)
 - [x] [Sentry](https://sentry.io/)
 - [x] [Netlify CICD](https://www.netlify.com/)
-- [ ] [SNYK]()
+- [x] [SNYK](https://snyk.io)
 - [ ] [Unit Tests](https://create-react-app.dev/docs/running-tests/)
 - [ ] [Styled Component](https://www.styled-components.com/)
 - [x] [StoryBook](https://storybook.js.org/)
@@ -40,3 +40,4 @@ Must Have:
 - [x] [PWA](https://create-react-app.dev/docs/making-a-progressive-web-app/)
 - [x] [Background Sync](https://developers.google.com/web/tools/workbox/modules/workbox-background-sync)
 - [x] [Source Map Explorer](https://www.npmjs.com/package/source-map-explorer)
+
