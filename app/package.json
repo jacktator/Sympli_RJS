@@ -29,8 +29,27 @@
     "build": "yarn run build:app && yarn run build:explorer",
     "build:app": "REACT_APP_COMMIT=$COMMIT_REF react-scripts build",
     "build:explorer": "yarn run analyze --html ./build/explorer.html",
-    "test": "react-scripts test",
+    "test": "react-scripts test --coverage",
     "eject": "react-scripts eject"
+  },
+  "jest": {
+    "collectCoverageFrom": [
+      "**/*.{ts,tsx}",
+      "!**/node_modules/**",
+      "!src/**/*.d.ts",
+      "!src/index.tsx",
+      "!src/service-worker.ts",
+      "!src/serviceWorkerRegistration.ts",
+      "!src/reportWebVitals.ts"
+    ],
+    "coverageThreshold": {
+      "global": {
+        "branches": 95,
+        "functions": 95,
+        "lines": 95,
+        "statements": 95
+      }
+    }
   },
   "eslintConfig": {
     "extends": [
@@ -54,10 +73,10 @@
     "@testing-library/jest-dom": "^5.11.4",
     "@testing-library/react": "^11.1.0",
     "@testing-library/user-event": "^12.1.10",
-    "source-map-explorer": "^2.5.2",
     "@types/jest": "^26.0.15",
     "@types/node": "^12.0.0",
     "@types/react": "^16.9.53",
-    "@types/react-dom": "^16.9.8"
+    "@types/react-dom": "^16.9.8",
+    "source-map-explorer": "^2.5.2"
   }
 }

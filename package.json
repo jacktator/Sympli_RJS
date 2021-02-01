@@ -10,7 +10,7 @@
     "start": "yarn workspace @sympli/starwars start",
     "storybook": "yarn workspace @sympli/storybook start",
     "build": "yarn workspaces run build",
-    "test": "yarn workspaces run test",
+    "test": "yarn workspaces run test --watchAll=false",
     "format": "yarn workspaces run prettier --write **/*.ts{,x}",
     "lint": "yarn workspaces run eslint --ext .ts,.tsx"
   },

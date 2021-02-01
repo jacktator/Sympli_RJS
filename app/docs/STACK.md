@@ -28,7 +28,6 @@ Must Have:
 - [ ] [Code Spliting with Routes](https://reactjs.org/docs/code-splitting.html#route-based-code-splitting)
 - [x] [ESLint](https://medium.com/@brygrill/create-react-app-with-typescript-eslint-prettier-and-github-actions-f3ce6a571c97)
 - [x] [Prettier](https://medium.com/@brygrill/create-react-app-with-typescript-eslint-prettier-and-github-actions-f3ce6a571c97)
-- [ ] [FullStory]()
 - [x] [Error Boundary](https://reactjs.org/docs/error-boundaries.html)
 - [x] [Sentry](https://sentry.io/)
 - [x] [Netlify CICD](https://www.netlify.com/)
@@ -40,4 +39,5 @@ Must Have:
 - [x] [PWA](https://create-react-app.dev/docs/making-a-progressive-web-app/)
 - [x] [Background Sync](https://developers.google.com/web/tools/workbox/modules/workbox-background-sync)
 - [x] [Source Map Explorer](https://www.npmjs.com/package/source-map-explorer)
+- [ ] [FullStory]()
 
