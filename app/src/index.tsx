@@ -1,17 +1,16 @@
-import React from 'react';
-import ReactDOM from 'react-dom';
-import './index.css';
-import App from './App';
-import * as serviceWorkerRegistration from './serviceWorkerRegistration';
-import reportWebVitals from './reportWebVitals';
+import React from "react";
+import ReactDOM from "react-dom";
+import "./index.css";
+import App from "./App";
+import * as serviceWorkerRegistration from "./serviceWorkerRegistration";
+import reportWebVitals from "./reportWebVitals";
 import * as Sentry from "@sentry/react";
 import {Integrations} from "@sentry/tracing";
 
 Sentry.init({
-  dsn: "https://7456d8dbc1284aeb923ec686d966be17@o514002.ingest.sentry.io/5616671",
-  integrations: [
-    new Integrations.BrowserTracing(),
-  ],
+  dsn:
+    "https://7456d8dbc1284aeb923ec686d966be17@o514002.ingest.sentry.io/5616671",
+  integrations: [new Integrations.BrowserTracing()],
 
   // We recommend adjusting this value in production, or using tracesSampler
   // for finer control
@@ -22,7 +21,7 @@ ReactDOM.render(
   <React.StrictMode>
     <App />
   </React.StrictMode>,
-  document.getElementById('root')
+  document.getElementById("root")
 );
 
 // If you want your app to work offline and load faster, you can change

@@ -1,5 +1,5 @@
-import React, {Component, ErrorInfo, ReactNode} from 'react';
-import {GenericError} from '../../components/GenericError';
+import React, {Component, ErrorInfo, ReactNode} from "react";
+import {GenericError} from "../../components/GenericError";
 
 interface Props {
   children: ReactNode;
@@ -21,7 +21,7 @@ class ErrorBoundary extends Component<Props, State> {
 
   public componentDidCatch(error: Error, errorInfo: ErrorInfo) {
     // TODO: Report GenericError to Sentry
-    console.error('Uncaught error:', error, errorInfo);
+    console.error("Uncaught error:", error, errorInfo);
   }
 
   public render() {

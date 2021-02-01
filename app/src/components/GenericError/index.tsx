@@ -1,7 +1,6 @@
-import * as React from 'react';
+import * as React from "react";
+import {ERROR_MESSAGE} from "../../utils/constants";
 
 export const GenericError = () => {
-  return (
-    <div>Oops...Something went wrong. Please try again later.</div>
-  )
-}
+  return <div>{ERROR_MESSAGE}</div>;
+};

@@ -26,7 +26,7 @@ For more info, please see [`./app/README.md`](./app/README.md)
 
 ## The Storybook
 
-The Storybook is created to host components and docs.
+[The Storybook](./storybook/README.md) is created to host components and docs.
 
 ## The Packages
 
