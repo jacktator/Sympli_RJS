@@ -1,4 +1,5 @@
 import React, {Component, ErrorInfo, ReactNode} from "react";
+import * as Sentry from "@sentry/browser";
 import {GenericError} from "../../components/GenericError";
 
 interface Props {
@@ -20,8 +21,7 @@ class ErrorBoundary extends Component<Props, State> {
   }
 
   public componentDidCatch(error: Error, errorInfo: ErrorInfo) {
-    // TODO: Report GenericError to Sentry
-    console.error("Uncaught error:", error, errorInfo);
+    Sentry.captureException(error);
   }
 
   public render() {
