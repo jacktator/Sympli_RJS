@@ -8,10 +8,14 @@ export interface SWAPIPerson {
 }
 
 export interface SWAPIPeopleResponse {
-  count: number;
-  next?: string;
-  previous?: string;
-  results: SWAPIPerson[];
+  data: {
+    count: number;
+    next?: string;
+    previous?: string;
+    results: SWAPIPerson[];
+  }
 }
 
-export interface SWAPIPersonResponse extends SWAPIPerson {}
+export interface SWAPIPersonResponse {
+  data: SWAPIPerson
+}

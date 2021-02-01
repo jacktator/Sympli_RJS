@@ -17,9 +17,10 @@ export const PeopleProvider: React.FC<PeopleProviderProps> = ({
   const getPeople = async () => {
     const res = await api.getPeople();
 
-    const {count, next, previous, results} = res;
+    const {count, next, previous, results} = res.data;
+    console.log("res", res)
 
-    const people = mapAPIPersonToPerson(results);
+    const people = results ? mapAPIPersonToPerson(results) : [];
 
     setState({
       isLoading: false,
@@ -41,7 +42,7 @@ export const PeopleProvider: React.FC<PeopleProviderProps> = ({
     } catch (e) {
       Sentry.captureException(e);
     }
-  }, [state]);
+  }, []);
 
   return <PeopleContext.Provider value={state}>{children}</PeopleContext.Provider>;
 };
