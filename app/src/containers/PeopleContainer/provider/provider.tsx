@@ -25,8 +25,8 @@ export const PeopleProvider: React.FC<PeopleProviderProps> = ({
     setState({
       isLoading: false,
       count,
-      next,
-      previous,
+      next: next || undefined,
+      previous: previous || undefined,
       results: people
     });
   }
