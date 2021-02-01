@@ -1,17 +1,19 @@
+import {Dispatch} from "react";
 import {Person} from '../../../utils/types';
+import {PageAction} from "./reducer";
 
 export interface PeopleState {
   isLoading: boolean;
   count: number;
-  next?: string;
-  previous?: string;
+  page: number;
   results: Person[];
+  dispatch: Dispatch<PageAction>
 }
 
 export const initialState: PeopleState = {
   isLoading: true,
   count: 0,
-  next: undefined,
-  previous: undefined,
-  results: []
+  page: 1,
+  results: [],
+  dispatch: () => {}
 };

@@ -6,3 +6,5 @@ export default {
 }
 
 export const PeopleContainer = () => <Component />
+PeopleContainer.args = {
+}
