@@ -46,6 +46,7 @@
       "!src/service-worker.ts",
       "!src/serviceWorkerRegistration.ts",
       "!src/reportWebVitals.ts",
+      "!src/components/**/*.tsx",
       "!src/**/*.stories.tsx"
     ]
   },

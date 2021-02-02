@@ -1,6 +1,6 @@
 import {SWAPIPersonResponse} from "../types";
 
-export const PEOSON: SWAPIPersonResponse = {
+export const PERSON: SWAPIPersonResponse = {
   data: {
     "name": "Luke Skywalker",
     "height": "172",
