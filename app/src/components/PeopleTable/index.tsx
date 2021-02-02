@@ -1,5 +1,7 @@
 import * as React from 'react';
 import {
+  Button,
+  Hidden,
   Paper,
   Table,
   TableBody,
@@ -12,6 +14,8 @@ import {
 } from "@material-ui/core";
 import {Person} from "../../utils/types";
 import {PaginationActions} from "./PaginationActions";
+import {PATH_PEOPLE} from "../../utils/constants";
+import {Link} from "react-router-dom";
 
 export interface PeopleTableProps {
   people: Person[];
@@ -22,6 +26,8 @@ export interface PeopleTableProps {
 
 export const PeopleTable = ({people, page, count, handleChangePage}: PeopleTableProps) => {
 
+  const offset = (page - 1) * people.length;
+
   return (
     <TableContainer component={Paper}>
       <Table aria-label="simple table">
@@ -29,21 +35,33 @@ export const PeopleTable = ({people, page, count, handleChangePage}: PeopleTable
           <TableRow>
             <TableCell size={"small"}>Character</TableCell>
             <TableCell size={"small"} align="right">Height</TableCell>
-            <TableCell size={"small"} align="right">Mass</TableCell>
-            {/*<TableCell align="right">Films&nbsp;(g)</TableCell>*/}
+            <Hidden mdDown>
+              <TableCell size={"small"} align="right">Mass</TableCell>
+            </Hidden>
+            <TableCell size={"small"} align="right"></TableCell>
           </TableRow>
         </TableHead>
         <TableBody>
-          {people.map((person) => (
-            <TableRow key={person.name}>
-              <TableCell component="th" scope="row" size={"small"}>
-                {person.name}
-              </TableCell>
-              <TableCell align="right" size={"small"}>{person.height}</TableCell>
-              <TableCell align="right" size={"small"}>{person.mass}</TableCell>
-              {/*<TableCell align="right">{row.films}</TableCell>*/}
-            </TableRow>
-          ))}
+          {people.map((person, i) => {
+            const index = offset + (i + 1);
+            return (
+              <TableRow key={person.name}>
+                <TableCell component="th" scope="row" size={"small"}>
+                  {person.name}
+                </TableCell>
+                <TableCell align="right" size={"small"}>{person.height}</TableCell>
+                <Hidden mdDown>
+                  <TableCell align="right" size={"small"}>{person.mass}</TableCell>
+                </Hidden>
+                <TableCell align="right" size={"small"}>
+                  <Button color="primary" component={Link}
+                          to={`${PATH_PEOPLE}/${index}`}>
+                    View
+                  </Button>
+                </TableCell>
+              </TableRow>
+            )
+          })}
         </TableBody>
         <TableFooter>
           <TableRow>
@@ -54,7 +72,7 @@ export const PeopleTable = ({people, page, count, handleChangePage}: PeopleTable
               rowsPerPageOptions={[people.length]}
               page={page}
               SelectProps={{
-                inputProps: { 'aria-label': 'rows per page' },
+                inputProps: {'aria-label': 'rows per page'},
                 native: true,
               }}
               onChangePage={(_, newNumber) => handleChangePage(newNumber)}

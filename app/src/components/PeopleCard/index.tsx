@@ -22,10 +22,13 @@ export const PersonCard = ({person}: PersonCardProps) => {
           {person.name}
         </Typography>
         <Typography color="textSecondary">
-          {person.birth_year}
+          Height: {person.height}
         </Typography>
         <Typography variant="body2" component="p">
-          {person.gender}
+          Birth: {person.birth_year}
+        </Typography>
+        <Typography variant="body2" component="p">
+          Gender: {person.gender}
         </Typography>
       </CardContent>
       {
