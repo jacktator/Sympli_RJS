@@ -1,10 +1,9 @@
 import React from 'react';
 import CardActions from '@material-ui/core/CardActions';
 import CardContent from '@material-ui/core/CardContent';
-import Button from '@material-ui/core/Button';
 import Typography from '@material-ui/core/Typography';
 import {Person} from "../../utils/types";
-import {PersonCardWrapper} from "./index.style";
+import {PersonCardWrapper, ViewButton} from "./index.style";
 import {Link} from "@material-ui/core";
 
 export interface PersonCardProps {
@@ -38,9 +37,9 @@ export const PersonCard = ({person}: PersonCardProps) => {
             person.films.slice(0, 3).map((film, i) => {
               return (
                 <Link key={film.title} href={film.link} target={"_blank"}>
-                  <Button variant="contained" color={i === 0 ? "primary" : "secondary"} size="small">
+                  <ViewButton shouldAnimate={i === 0} variant="contained" color={i === 0 ? "primary" : "secondary"} size="small">
                     {film.title}
-                  </Button>
+                  </ViewButton>
                 </Link>
               )
             })

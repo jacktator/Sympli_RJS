@@ -54,7 +54,8 @@ export const PeopleTable = ({people, page, count, handleChangePage}: PeopleTable
                   <TableCell align="right" size={"small"}>{person.mass}</TableCell>
                 </Hidden>
                 <TableCell align="right" size={"small"}>
-                  <Button color="primary" component={Link}
+                  <Button color="primary"
+                          component={Link}
                           to={`${PATH_PEOPLE}/${index}`}>
                     View
                   </Button>

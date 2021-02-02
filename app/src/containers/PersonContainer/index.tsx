@@ -1,5 +1,5 @@
 import {PersonProvider, usePerson} from "./provider";
-import {PersonCard} from "../../components/PeopleCard";
+import {PersonCard} from "../../components/PersonCard";
 import * as React from "react";
 import {Loading} from "../../components/Loading";
 import {Paper} from "@material-ui/core";

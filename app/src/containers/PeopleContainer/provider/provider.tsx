@@ -27,18 +27,22 @@ export const PeopleProvider: React.FC<PeopleProviderProps> = ({
 
     const people = results ? mapAPIPersonToPerson(results) : [];
 
-    setState({
-      ...state,
-      isLoading: false,
-      count,
-      results: people
+    setState(state => {
+      return {
+        ...state,
+        isLoading: false,
+        count,
+        results: people
+      }
     });
   }
 
   useEffect(() => {
-    setState({
-      ...state,
-      isLoading: true,
+    setState(state => {
+      return {
+        ...state,
+        isLoading: true,
+      }
     });
 
     try {

@@ -28,16 +28,20 @@ export const PersonProvider: React.FC<PersonProviderProps> = ({
 
     const person = mapAPIPersonToPerson(data, films);
 
-    setState({
-      isLoading: false,
-      person: person,
+    setState(state => {
+      return {
+        isLoading: false,
+        person: person,
+      }
     });
   }
 
   useEffect(() => {
-    setState({
-      ...state,
-      isLoading: true,
+    setState(state => {
+      return {
+        ...state,
+        isLoading: true,
+      }
     });
 
     try {
