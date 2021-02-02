@@ -9,14 +9,15 @@ const App = () => {
       <AppWithRouter />
     </ErrorBoundary>
   );
-}
+};
 
 const AppWithRouter = () => {
   return (
     <Router>
+      {/*<Navbar />*/}
       <Home />
     </Router>
-  )
-}
+  );
+};
 
 export default App;
