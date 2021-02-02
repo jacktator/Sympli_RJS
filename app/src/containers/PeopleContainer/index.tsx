@@ -2,6 +2,7 @@ import {PeopleProvider, usePeople} from "./provider";
 import {PageAction} from "./provider/reducer";
 import {PeopleTable} from "../../components/PeopleTable";
 import * as React from "react";
+import {Loading} from "../../components/Loading";
 
 export const PeopleConsumer = () => {
 
@@ -18,7 +19,7 @@ export const PeopleConsumer = () => {
     <>
       {
         isLoading ? (
-          <span>Loading...</span>
+          <Loading />
         ) : (
           <PeopleTable people={results} page={page} count={count} handleChangePage={handleChangePage}/>
         )

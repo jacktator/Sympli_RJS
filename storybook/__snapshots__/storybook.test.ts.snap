@@ -6,6 +6,42 @@ exports[`Storyshots App/Components Generic Error 1`] = `
 </div>
 `;
 
+exports[`Storyshots App/Components Loading 1`] = `
+<div
+  className="sc-gsTCUz lbLgaL"
+>
+  <div
+    className="sc-bdfBwQ bxZvFu"
+  >
+    <div
+      className="MuiCircularProgress-root MuiCircularProgress-colorPrimary MuiCircularProgress-indeterminate"
+      role="progressbar"
+      style={
+        Object {
+          "height": 40,
+          "width": 40,
+        }
+      }
+    >
+      <svg
+        className="MuiCircularProgress-svg"
+        viewBox="22 22 44 44"
+      >
+        <circle
+          className="MuiCircularProgress-circle MuiCircularProgress-circleIndeterminate"
+          cx={44}
+          cy={44}
+          fill="none"
+          r={20.2}
+          strokeWidth={3.6}
+          style={Object {}}
+        />
+      </svg>
+    </div>
+  </div>
+</div>
+`;
+
 exports[`Storyshots App/Components Navbar 1`] = `
 <header
   className="MuiPaper-root MuiAppBar-root MuiAppBar-positionStatic MuiAppBar-colorPrimary MuiPaper-elevation4"
@@ -15,7 +51,7 @@ exports[`Storyshots App/Components Navbar 1`] = `
   >
     <button
       aria-label="open drawer"
-      className="MuiButtonBase-root MuiIconButton-root sc-bdfBwQ iIPIYW MuiIconButton-colorInherit MuiIconButton-edgeStart"
+      className="MuiButtonBase-root MuiIconButton-root sc-dlfnbm iwVDOd MuiIconButton-colorInherit MuiIconButton-edgeStart"
       disabled={false}
       onBlur={[Function]}
       onDragLeave={[Function]}
@@ -131,7 +167,7 @@ exports[`Storyshots App/Components People Table 1`] = `
               1-0 of 10
             </p>
             <div
-              className="sc-jSgupP kZjIDn"
+              className="sc-iBPRYJ jFNwEO"
             >
               <button
                 aria-label="first page"
@@ -280,7 +316,7 @@ exports[`Storyshots App/Components People Table 1`] = `
 
 exports[`Storyshots App/Components Person Card 1`] = `
 <div
-  className="MuiPaper-root MuiCard-root sc-hKgILt ehILol MuiPaper-outlined MuiPaper-rounded"
+  className="MuiPaper-root MuiCard-root sc-jSgupP YVkfP MuiPaper-outlined MuiPaper-rounded"
 >
   <div
     className="MuiCardContent-root"
@@ -306,131 +342,41 @@ exports[`Storyshots App/Components Person Card 1`] = `
       male
     </p>
   </div>
-  <div
-    className="MuiCardActions-root MuiCardActions-spacing"
-  >
-    <a
-      className="MuiTypography-root MuiLink-root MuiLink-underlineHover MuiTypography-colorPrimary"
-      href={[Function]}
-      onBlur={[Function]}
-      onFocus={[Function]}
-      target="_blank"
-    >
-      <button
-        className="MuiButtonBase-root MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-containedSizeSmall MuiButton-sizeSmall"
-        disabled={false}
-        onBlur={[Function]}
-        onDragLeave={[Function]}
-        onFocus={[Function]}
-        onKeyDown={[Function]}
-        onKeyUp={[Function]}
-        onMouseDown={[Function]}
-        onMouseLeave={[Function]}
-        onMouseUp={[Function]}
-        onTouchEnd={[Function]}
-        onTouchMove={[Function]}
-        onTouchStart={[Function]}
-        tabIndex={0}
-        type="button"
-      >
-        <span
-          className="MuiButton-label"
-        />
-      </button>
-    </a>
-    <a
-      className="MuiTypography-root MuiLink-root MuiLink-underlineHover MuiTypography-colorPrimary"
-      href={[Function]}
-      onBlur={[Function]}
-      onFocus={[Function]}
-      target="_blank"
-    >
-      <button
-        className="MuiButtonBase-root MuiButton-root MuiButton-contained MuiButton-containedSecondary MuiButton-containedSizeSmall MuiButton-sizeSmall"
-        disabled={false}
-        onBlur={[Function]}
-        onDragLeave={[Function]}
-        onFocus={[Function]}
-        onKeyDown={[Function]}
-        onKeyUp={[Function]}
-        onMouseDown={[Function]}
-        onMouseLeave={[Function]}
-        onMouseUp={[Function]}
-        onTouchEnd={[Function]}
-        onTouchMove={[Function]}
-        onTouchStart={[Function]}
-        tabIndex={0}
-        type="button"
-      >
-        <span
-          className="MuiButton-label"
-        />
-      </button>
-    </a>
-    <a
-      className="MuiTypography-root MuiLink-root MuiLink-underlineHover MuiTypography-colorPrimary"
-      href={[Function]}
-      onBlur={[Function]}
-      onFocus={[Function]}
-      target="_blank"
-    >
-      <button
-        className="MuiButtonBase-root MuiButton-root MuiButton-contained MuiButton-containedSecondary MuiButton-containedSizeSmall MuiButton-sizeSmall"
-        disabled={false}
-        onBlur={[Function]}
-        onDragLeave={[Function]}
-        onFocus={[Function]}
-        onKeyDown={[Function]}
-        onKeyUp={[Function]}
-        onMouseDown={[Function]}
-        onMouseLeave={[Function]}
-        onMouseUp={[Function]}
-        onTouchEnd={[Function]}
-        onTouchMove={[Function]}
-        onTouchStart={[Function]}
-        tabIndex={0}
-        type="button"
-      >
-        <span
-          className="MuiButton-label"
-        />
-      </button>
-    </a>
-    <a
-      className="MuiTypography-root MuiLink-root MuiLink-underlineHover MuiTypography-colorPrimary"
-      href={[Function]}
-      onBlur={[Function]}
-      onFocus={[Function]}
-      target="_blank"
-    >
-      <button
-        className="MuiButtonBase-root MuiButton-root MuiButton-contained MuiButton-containedSecondary MuiButton-containedSizeSmall MuiButton-sizeSmall"
-        disabled={false}
-        onBlur={[Function]}
-        onDragLeave={[Function]}
-        onFocus={[Function]}
-        onKeyDown={[Function]}
-        onKeyUp={[Function]}
-        onMouseDown={[Function]}
-        onMouseLeave={[Function]}
-        onMouseUp={[Function]}
-        onTouchEnd={[Function]}
-        onTouchMove={[Function]}
-        onTouchStart={[Function]}
-        tabIndex={0}
-        type="button"
-      >
-        <span
-          className="MuiButton-label"
-        />
-      </button>
-    </a>
-  </div>
 </div>
 `;
 
 exports[`Storyshots App/Containers People Container 1`] = `
-<span>
-  Loading...
-</span>
+<div
+  className="sc-gsTCUz lbLgaL"
+>
+  <div
+    className="sc-bdfBwQ bxZvFu"
+  >
+    <div
+      className="MuiCircularProgress-root MuiCircularProgress-colorPrimary MuiCircularProgress-indeterminate"
+      role="progressbar"
+      style={
+        Object {
+          "height": 40,
+          "width": 40,
+        }
+      }
+    >
+      <svg
+        className="MuiCircularProgress-svg"
+        viewBox="22 22 44 44"
+      >
+        <circle
+          className="MuiCircularProgress-circle MuiCircularProgress-circleIndeterminate"
+          cx={44}
+          cy={44}
+          fill="none"
+          r={20.2}
+          strokeWidth={3.6}
+          style={Object {}}
+        />
+      </svg>
+    </div>
+  </div>
+</div>
 `;

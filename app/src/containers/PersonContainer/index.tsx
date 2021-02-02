@@ -1,12 +1,14 @@
 import {PersonProvider, usePerson} from "./provider";
 import {PersonCard} from "../../components/PeopleCard";
+import * as React from "react";
+import {Loading} from "../../components/Loading";
 
 export const PersonConsumer = () => {
 
   const {isLoading, person} = usePerson();
 
   return isLoading ? (
-      <span>Loading...</span>
+      <Loading />
     ) : (
       <PersonCard person={person} />
     )
