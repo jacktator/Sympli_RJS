@@ -1,7 +1,8 @@
 import React, {lazy, Suspense} from "react";
 import ErrorBoundary from "./containers/ErrorBoundary";
-import {BrowserRouter as Router} from "react-router-dom";
+import {BrowserRouter as Router, Redirect, Route, Switch} from "react-router-dom";
 import {Loading} from "./components/Loading";
+import {PATH_PEOPLE} from "./utils/constants";
 
 const Home = lazy(() => import('./page/Home'));
 
@@ -19,7 +20,12 @@ const AppWithRouter = () => {
   return (
     <Router>
       {/*<Navbar />*/}
-      <Home />
+      <Switch>
+        <Route path={PATH_PEOPLE}>
+          <Home />
+        </Route>
+        <Redirect to={PATH_PEOPLE} />
+      </Switch>
     </Router>
   );
 };

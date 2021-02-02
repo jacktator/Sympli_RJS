@@ -1,10 +1,10 @@
 import * as React from "react";
-import {PeopleContainer as Component} from './'
+import * as Container from './'
 
 export default {
   title: 'App/Containers',
 }
 
-export const PeopleContainer = () => <Component />
+export const PeopleContainer = () => <Container.default />
 PeopleContainer.args = {
 }

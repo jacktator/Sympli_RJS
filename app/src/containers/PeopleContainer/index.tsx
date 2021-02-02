@@ -30,10 +30,12 @@ export const PeopleConsumer = () => {
 
 export interface PeopleContainerProps {
 }
-export const PeopleContainer = () => {
+const PeopleContainer = () => {
   return (
     <PeopleProvider>
       <PeopleConsumer />
     </PeopleProvider>
   )
 }
+
+export default PeopleContainer;

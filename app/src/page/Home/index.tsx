@@ -1,23 +1,30 @@
-import {Redirect, Route, Switch} from "react-router-dom";
+import {Redirect, Route, Switch, useParams} from "react-router-dom";
 import {PATH_PEOPLE} from "../../utils/constants";
 import React from "react";
-import {PeopleContainer} from "../../containers/PeopleContainer";
+
+const PeopleContainer = React.lazy(() => import("../../containers/PeopleContainer"));
+const PersonContainer = React.lazy(() => import("../../containers/PersonContainer"));
+
+interface IndexProps {
+  index: string
+}
+const PersonContainerWithIndex = () => {
+  let { index } = useParams<IndexProps>();
+
+  return isNaN(Number(index)) ? (
+    <Redirect to={PATH_PEOPLE} />
+  ) : (
+    <PersonContainer index={parseInt(index)} />
+  )
+}
 
 const Home = () => {
   return (
     <div>
       <PeopleContainer />
       <Switch>
-        <Route exact path={`${PATH_PEOPLE}`}>
-        </Route>
         <Route exact path={`${PATH_PEOPLE}/:index`}>
-          <a
-            href="https://reactjs.org"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Person
-          </a>
+          <PersonContainerWithIndex />
         </Route>
         <Redirect to={PATH_PEOPLE} />
       </Switch>

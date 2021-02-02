@@ -380,3 +380,39 @@ exports[`Storyshots App/Containers People Container 1`] = `
   </div>
 </div>
 `;
+
+exports[`Storyshots App/Containers Person Container 1`] = `
+<div
+  className="sc-gsTCUz lbLgaL"
+>
+  <div
+    className="sc-bdfBwQ bxZvFu"
+  >
+    <div
+      className="MuiCircularProgress-root MuiCircularProgress-colorPrimary MuiCircularProgress-indeterminate"
+      role="progressbar"
+      style={
+        Object {
+          "height": 40,
+          "width": 40,
+        }
+      }
+    >
+      <svg
+        className="MuiCircularProgress-svg"
+        viewBox="22 22 44 44"
+      >
+        <circle
+          className="MuiCircularProgress-circle MuiCircularProgress-circleIndeterminate"
+          cx={44}
+          cy={44}
+          fill="none"
+          r={20.2}
+          strokeWidth={3.6}
+          style={Object {}}
+        />
+      </svg>
+    </div>
+  </div>
+</div>
+`;

@@ -17,10 +17,12 @@ export const PersonConsumer = () => {
 export interface PersonContainerProps {
   index: number;
 }
-export const PersonContainer = ({index}: PersonContainerProps) => {
+const PersonContainer = ({index}: PersonContainerProps) => {
   return (
     <PersonProvider index={index}>
       <PersonConsumer />
     </PersonProvider>
   )
 }
+
+export default PersonContainer;
