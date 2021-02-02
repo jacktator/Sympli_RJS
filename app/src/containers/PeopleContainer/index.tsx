@@ -1,5 +1,6 @@
 import {PeopleProvider, usePeople} from "./provider";
 import {PageAction} from "./provider/reducer";
+import {PeopleTable} from "../../components/Table";
 
 export const PeopleConsumer = () => {
 
@@ -12,11 +13,7 @@ export const PeopleConsumer = () => {
         isLoading ? (
           <span>Loading...</span>
         ) : (
-          <ul>
-            {
-              results.map(person => <li key={person.name}>{person.name}</li>)
-            }
-          </ul>
+          <PeopleTable people={results} />
         )
       }
       <button disabled={page === 1} onClick={() => dispatch(PageAction.PREVIOUS)}>Previous</button>
