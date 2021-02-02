@@ -1,4 +1,4 @@
-import {Person} from "../../../utils/types";
+import {Film, Person} from "../../../utils/types";
 import {SWAPIPerson} from "../../../api/types";
 
 export const mapAPIPersonToPerson = (results: SWAPIPerson[]): Person[] => results.map(resPerson => {
@@ -7,8 +7,14 @@ export const mapAPIPersonToPerson = (results: SWAPIPerson[]): Person[] => result
     height,
     birth_year,
     gender,
-    films
+    films: resFilms
   } = resPerson;
+
+  const films = resFilms.map(resFilm => {
+    return {
+      link: resFilm
+    } as Film;
+  })
 
   return {
     name,

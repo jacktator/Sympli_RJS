@@ -1,12 +1,16 @@
-import React from "react";
+import React, {lazy, Suspense} from "react";
 import ErrorBoundary from "./containers/ErrorBoundary";
 import {BrowserRouter as Router} from "react-router-dom";
-import {Home} from "./page/Home";
+import {Loading} from "./components/Loading";
+
+const Home = lazy(() => import('./page/Home'));
 
 const App = () => {
   return (
     <ErrorBoundary>
-      <AppWithRouter />
+      <Suspense fallback={<Loading />}>
+        <AppWithRouter />
+      </Suspense>
     </ErrorBoundary>
   );
 };

@@ -7,10 +7,10 @@ export const PersonConsumer = () => {
 
   const {isLoading, person} = usePerson();
 
-  return isLoading ? (
-      <Loading />
-    ) : (
+  return !isLoading && person ? (
       <PersonCard person={person} />
+    ) : (
+      <Loading />
     )
 }
 

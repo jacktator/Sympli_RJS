@@ -1,11 +1,12 @@
 import {Redirect, Route, Switch} from "react-router-dom";
 import {PATH_PEOPLE} from "../../utils/constants";
 import React from "react";
+import {PeopleContainer} from "../../containers/PeopleContainer";
 
-export const Home = () => {
+const Home = () => {
   return (
     <div>
-      <div>Table</div>
+      <PeopleContainer />
       <Switch>
         <Route exact path={`${PATH_PEOPLE}`}>
         </Route>
@@ -23,3 +24,5 @@ export const Home = () => {
     </div>
   )
 }
+
+export default Home;
