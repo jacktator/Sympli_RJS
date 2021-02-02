@@ -22,7 +22,7 @@ export const PersonProvider: React.FC<PersonProviderProps> = ({
     const {data} = await api.getPerson(i);
 
     const requests = data.films.map(film => {
-      return axios.get(film) as Promise<SWAPIFilmResponse>
+      return axios.get(film.replace("http", "https")) as Promise<SWAPIFilmResponse>
     });
     const films = await axios.all(requests);
 
