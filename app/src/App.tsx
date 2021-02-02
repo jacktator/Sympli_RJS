@@ -3,6 +3,7 @@ import ErrorBoundary from "./containers/ErrorBoundary";
 import {BrowserRouter as Router, Redirect, Route, Switch} from "react-router-dom";
 import {Loading} from "./components/Loading";
 import {PATH_PEOPLE} from "./utils/constants";
+import {Navbar} from "./components/Navbar";
 
 const Home = lazy(() => import('./page/Home'));
 
@@ -19,7 +20,7 @@ const App = () => {
 const AppWithRouter = () => {
   return (
     <Router>
-      {/*<Navbar />*/}
+      <Navbar />
       <Switch>
         <Route path={PATH_PEOPLE}>
           <Home />

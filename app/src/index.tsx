@@ -5,6 +5,7 @@ import * as serviceWorkerRegistration from "./serviceWorkerRegistration";
 import reportWebVitals from "./reportWebVitals";
 import * as Sentry from "@sentry/react";
 import {Integrations} from "@sentry/tracing";
+import "./index.css";
 
 Sentry.init({
   dsn:
