@@ -29,7 +29,7 @@ For more info, please see [`./app/README.md`](./app/README.md)
 
 [The Storybook](./storybook/README.md) is created to host components and docs.
 
-## The Packages
+## The Packages (TODO)
 
 Presentational Components are created and placed into separate packages.
 
@@ -52,8 +52,12 @@ Containers are covered by Unit Test and Mock Data.
 Given it's a simple application, `redux` package would be too heavy an overkill on the bundle size.
 
 Instead, React Hooks are used to achieve Redux-Like features
+
 - Context and Provider
-- `useReducer` 
+- `useReducer`
+- `utils`
+
+Reducers and Utils are covered by Unit Tests. 
 
 # Code Quality
 
@@ -67,6 +71,18 @@ All Network Errors are handled within the `Provider`.
 
 Any unhandled error, are caught by a catch-all `ErrorBoundary`, which reports to Sentry.
 
+# Optimization
+
+Bundles are code-split into small chucks and lazy loading is used.
+
+# PWA and Offline-First
+
+All files and responses are cached using approriate strategies.
+
+Once user has visited the app once, he'll be able to use it offline.
+
+![](./app/architecture.png)
+
 # Security
 
 SNYK
@@ -75,6 +91,6 @@ SNYK
 
 Netlify
 
-# UX Monitoring
+# UX Monitoring (TODO)
 
-FullStory (TODO)
+FullStory
