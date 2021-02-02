@@ -1,24 +1,28 @@
 import {PeopleProvider, usePeople} from "./provider";
 import {PageAction} from "./provider/reducer";
-import {PeopleTable} from "../../components/Table";
+import {PeopleTable} from "../../components/PeopleTable";
+import * as React from "react";
 
 export const PeopleConsumer = () => {
 
   const {isLoading, count, results, dispatch, page} = usePeople();
 
-  const maxPage = Math.floor(count / results.length);
+  const handleChangePage = (newPage: number) => {
+    dispatch({
+      action: PageAction.UPDATE,
+      page: newPage
+    })
+  };
+
   return (
     <>
       {
         isLoading ? (
           <span>Loading...</span>
         ) : (
-          <PeopleTable people={results} />
+          <PeopleTable people={results} page={page} count={count} handleChangePage={handleChangePage}/>
         )
       }
-      <button disabled={page === 1} onClick={() => dispatch(PageAction.PREVIOUS)}>Previous</button>
-      <span>{page}</span>
-      <button disabled={page === maxPage} onClick={() => page < maxPage && dispatch(PageAction.NEXT)}>Next</button>
     </>
   )
 }

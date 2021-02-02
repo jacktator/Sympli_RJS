@@ -1,11 +1,27 @@
-import {Paper, Table, TableBody, TableCell, TableContainer, TableHead, TableRow} from "@material-ui/core";
+import * as React from 'react';
+import {
+  Paper,
+  Table,
+  TableBody,
+  TableCell,
+  TableContainer,
+  TableFooter,
+  TableHead,
+  TablePagination,
+  TableRow
+} from "@material-ui/core";
 import {Person} from "../../utils/types";
+import {PaginationActions} from "./PaginationActions";
 
 export interface PeopleTableProps {
   people: Person[];
+  count: number;
+  page: number;
+  handleChangePage: (newPage: number) => void;
 }
 
-export const PeopleTable = ({people}: PeopleTableProps) => {
+export const PeopleTable = ({people, page, count, handleChangePage}: PeopleTableProps) => {
+
   return (
     <TableContainer component={Paper}>
       <Table aria-label="simple table">
@@ -31,6 +47,23 @@ export const PeopleTable = ({people}: PeopleTableProps) => {
             </TableRow>
           ))}
         </TableBody>
+        <TableFooter>
+          <TableRow>
+            <TablePagination
+              colSpan={3}
+              count={count}
+              rowsPerPage={people.length}
+              rowsPerPageOptions={[people.length]}
+              page={page}
+              SelectProps={{
+                inputProps: { 'aria-label': 'rows per page' },
+                native: true,
+              }}
+              onChangePage={(_, newNumber) => handleChangePage(newNumber)}
+              ActionsComponent={PaginationActions}
+            />
+          </TableRow>
+        </TableFooter>
       </Table>
     </TableContainer>
   )

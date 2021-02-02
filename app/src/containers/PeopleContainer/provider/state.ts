@@ -1,13 +1,13 @@
 import {Dispatch} from "react";
 import {Person} from '../../../utils/types';
-import {PageAction} from "./reducer";
+import {PagePayload} from "./reducer";
 
 export interface PeopleState {
   isLoading: boolean;
   count: number;
   page: number;
   results: Person[];
-  dispatch: Dispatch<PageAction>
+  dispatch: Dispatch<PagePayload>
 }
 
 export const initialState: PeopleState = {

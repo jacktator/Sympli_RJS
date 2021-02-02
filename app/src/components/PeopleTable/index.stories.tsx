@@ -5,7 +5,9 @@ export default {
   title: "App/Components",
 };
 
-export const Table = (args: PeopleTableProps) => <Component {...args} />;
-Table.args = {
-  people: []
+export const PeopleTable = (args: PeopleTableProps) => <Component {...args} />;
+PeopleTable.args = {
+  people: [],
+  count: 10,
+  page: 5
 }
