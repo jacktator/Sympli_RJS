@@ -1,4 +1,5 @@
 import {PersonProvider, usePerson} from "./provider";
+import {PersonCard} from "../../components/PeopleCard";
 
 export const PersonConsumer = () => {
 
@@ -7,14 +8,7 @@ export const PersonConsumer = () => {
   return isLoading ? (
       <span>Loading...</span>
     ) : (
-      <ul>
-        {
-          person?.name
-        }
-        {
-          person?.birth_year
-        }
-      </ul>
+      <PersonCard person={person} />
     )
 }
 

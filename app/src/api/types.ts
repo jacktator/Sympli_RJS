@@ -7,6 +7,12 @@ export interface SWAPIPerson {
   [others: string]: any;
 }
 
+export interface SWAPIFilm {
+  title: string;
+  url: string;
+  [others: string]: any;
+}
+
 export interface SWAPIPeopleResponse {
   data: {
     count: number;
@@ -18,4 +24,8 @@ export interface SWAPIPeopleResponse {
 
 export interface SWAPIPersonResponse {
   data: SWAPIPerson
+}
+
+export interface SWAPIFilmResponse {
+  data: SWAPIFilm
 }

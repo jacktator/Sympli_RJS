@@ -5,6 +5,8 @@ import {PersonContext} from './context';
 import * as api from "../../../api";
 import {mapAPIPersonToPerson} from "./utils";
 import * as Sentry from "@sentry/browser";
+import axios from "axios";
+import {SWAPIFilmResponse} from "../../../api/types";
 
 export interface PersonProviderProps {
   index: number;
@@ -19,7 +21,12 @@ export const PersonProvider: React.FC<PersonProviderProps> = ({
   const getPerson = async (i: number) => {
     const {data} = await api.getPerson(i);
 
-    const person = mapAPIPersonToPerson(data);
+    const requests = data.films.map(film => {
+      return axios.get(film) as Promise<SWAPIFilmResponse>
+    });
+    const films = await axios.all(requests);
+
+    const person = mapAPIPersonToPerson(data, films);
 
     setState({
       isLoading: false,
