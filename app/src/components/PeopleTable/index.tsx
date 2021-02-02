@@ -27,22 +27,20 @@ export const PeopleTable = ({people, page, count, handleChangePage}: PeopleTable
       <Table aria-label="simple table">
         <TableHead>
           <TableRow>
-            <TableCell>Dessert (100g serving)</TableCell>
-            <TableCell align="right">Height</TableCell>
-            <TableCell align="right">Gender&nbsp;(g)</TableCell>
-            <TableCell align="right">Birth Year&nbsp;(g)</TableCell>
+            <TableCell size={"small"}>Character</TableCell>
+            <TableCell size={"small"} align="right">Height</TableCell>
+            <TableCell size={"small"} align="right">Mass</TableCell>
             {/*<TableCell align="right">Films&nbsp;(g)</TableCell>*/}
           </TableRow>
         </TableHead>
         <TableBody>
           {people.map((person) => (
             <TableRow key={person.name}>
-              <TableCell component="th" scope="row">
+              <TableCell component="th" scope="row" size={"small"}>
                 {person.name}
               </TableCell>
-              <TableCell align="right">{person.height}</TableCell>
-              <TableCell align="right">{person.gender}</TableCell>
-              <TableCell align="right">{person.birth_year}</TableCell>
+              <TableCell align="right" size={"small"}>{person.height}</TableCell>
+              <TableCell align="right" size={"small"}>{person.mass}</TableCell>
               {/*<TableCell align="right">{row.films}</TableCell>*/}
             </TableRow>
           ))}

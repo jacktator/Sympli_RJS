@@ -4,6 +4,7 @@ export interface SWAPIPerson {
   birth_year: string;
   gender: string;
   films: string[];
+  mass: string;
   [others: string]: any;
 }
 

@@ -6,7 +6,8 @@ export const mapAPIPersonToPerson = (person: SWAPIPerson, resFilms: SWAPIFilmRes
     name,
     height,
     birth_year,
-    gender
+    gender,
+    mass
   } = person;
 
   const films = resFilms.map(resFilm => {
@@ -27,5 +28,6 @@ export const mapAPIPersonToPerson = (person: SWAPIPerson, resFilms: SWAPIFilmRes
     birth_year,
     gender,
     films,
+    mass
   } as Person;
 }

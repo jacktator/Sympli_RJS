@@ -32,7 +32,7 @@ export const PersonCard = ({person}: PersonCardProps) => {
         person.films.length > 0 &&
         <CardActions>
           {
-            person.films.map((film, i) => {
+            person.films.slice(0, 3).map((film, i) => {
               return (
                 <Link key={film.title} href={film.link} target={"_blank"}>
                   <Button variant="contained" color={i === 0 ? "primary" : "secondary"} size="small">

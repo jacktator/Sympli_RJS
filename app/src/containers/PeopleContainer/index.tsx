@@ -3,6 +3,7 @@ import {PageAction} from "./provider/reducer";
 import {PeopleTable} from "../../components/PeopleTable";
 import * as React from "react";
 import {Loading} from "../../components/Loading";
+import {Paper} from "@material-ui/core";
 
 export const PeopleConsumer = () => {
 
@@ -16,7 +17,7 @@ export const PeopleConsumer = () => {
   };
 
   return (
-    <>
+    <Paper>
       {
         isLoading ? (
           <Loading />
@@ -24,7 +25,7 @@ export const PeopleConsumer = () => {
           <PeopleTable people={results} page={page} count={count} handleChangePage={handleChangePage}/>
         )
       }
-    </>
+    </Paper>
   )
 }
 

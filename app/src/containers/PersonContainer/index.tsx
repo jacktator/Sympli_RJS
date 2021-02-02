@@ -2,16 +2,23 @@ import {PersonProvider, usePerson} from "./provider";
 import {PersonCard} from "../../components/PeopleCard";
 import * as React from "react";
 import {Loading} from "../../components/Loading";
+import {Paper} from "@material-ui/core";
 
 export const PersonConsumer = () => {
 
   const {isLoading, person} = usePerson();
 
-  return !isLoading && person ? (
-      <PersonCard person={person} />
-    ) : (
-      <Loading />
-    )
+  return (
+    <Paper>
+      {
+        !isLoading && person ? (
+          <PersonCard person={person} />
+        ) : (
+          <Loading />
+        )
+      }
+    </Paper>
+  )
 }
 
 export interface PersonContainerProps {
