@@ -13,7 +13,7 @@ interface IndexProps {
 const PersonContainerWithIndex = () => {
   let { index } = useParams<IndexProps>();
 
-  return isNaN(Number(index)) ? (
+  return isNaN(parseInt(index)) ? (
     <Redirect to={PATH_PEOPLE} />
   ) : (
     <PersonContainer index={parseInt(index)} />
