@@ -7,3 +7,19 @@ export const GenericErrorWrapper = styled.div`
   background-color: black;
   color: white;
 `;
+
+export const ErrorMessage = styled.span`
+  animation: blinker 1s linear infinite;
+  
+  @keyframes blinker {
+    49% {
+      opacity: 1;
+    }
+    50% {
+      opacity: 0;
+    }
+    100% {
+      opacity: 0;
+    }
+  }
+`;

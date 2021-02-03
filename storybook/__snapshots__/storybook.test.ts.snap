@@ -4,16 +4,20 @@ exports[`Storyshots App/Components Generic Error 1`] = `
 <div
   className="sc-bdfBwQ lnbRNb"
 >
-  There's a disturbance in the force. Jedi has been notified. Please try again later.
+  <span
+    className="sc-gsTCUz bywHbe"
+  >
+    There's a disturbance in the force. Jedi has been notified. Please try again later.
+  </span>
 </div>
 `;
 
 exports[`Storyshots App/Components Loading 1`] = `
 <div
-  className="sc-dlfnbm cBeKPA"
+  className="sc-hKgILt llTUKh"
 >
   <div
-    className="sc-gsTCUz fOtSmi"
+    className="sc-dlfnbm bAyFQJ"
   >
     <div
       className="MuiCircularProgress-root MuiCircularProgress-colorPrimary MuiCircularProgress-indeterminate"
@@ -53,7 +57,7 @@ exports[`Storyshots App/Components Navbar 1`] = `
   >
     <button
       aria-label="open drawer"
-      className="MuiButtonBase-root MuiIconButton-root sc-hKgILt dXxhoH MuiIconButton-colorInherit MuiIconButton-edgeStart"
+      className="MuiButtonBase-root MuiIconButton-root sc-eCssSg hXuVdI MuiIconButton-colorInherit MuiIconButton-edgeStart"
       disabled={false}
       onBlur={[Function]}
       onDragLeave={[Function]}
@@ -160,7 +164,7 @@ exports[`Storyshots App/Components People Table 1`] = `
               1-0 of 10
             </p>
             <div
-              className="sc-gKsewC dQGpRi"
+              className="sc-iBPRYJ jFNwEO"
             >
               <button
                 aria-label="first page"
@@ -321,7 +325,7 @@ exports[`Storyshots App/Components People Table 1`] = `
 
 exports[`Storyshots App/Components Person Card 1`] = `
 <div
-  className="MuiPaper-root MuiCard-root sc-iBPRYJ ibGGC MuiPaper-outlined MuiPaper-rounded"
+  className="MuiPaper-root MuiCard-root sc-fubCfw hosIpz MuiPaper-outlined MuiPaper-rounded"
 >
   <div
     className="MuiCardContent-root"
@@ -363,10 +367,10 @@ exports[`Storyshots App/Containers People Container 1`] = `
   className="MuiPaper-root MuiPaper-elevation1 MuiPaper-rounded"
 >
   <div
-    className="sc-dlfnbm cBeKPA"
+    className="sc-hKgILt llTUKh"
   >
     <div
-      className="sc-gsTCUz fOtSmi"
+      className="sc-dlfnbm bAyFQJ"
     >
       <div
         className="MuiCircularProgress-root MuiCircularProgress-colorPrimary MuiCircularProgress-indeterminate"
@@ -403,10 +407,10 @@ exports[`Storyshots App/Containers Person Container 1`] = `
   className="MuiPaper-root MuiPaper-elevation1 MuiPaper-rounded"
 >
   <div
-    className="sc-dlfnbm cBeKPA"
+    className="sc-hKgILt llTUKh"
   >
     <div
-      className="sc-gsTCUz fOtSmi"
+      className="sc-dlfnbm bAyFQJ"
     >
       <div
         className="MuiCircularProgress-root MuiCircularProgress-colorPrimary MuiCircularProgress-indeterminate"
